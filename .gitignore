@@ -6,4 +6,6 @@ AndroidApp/bin
 AndroidApp/obj
 iosApp/bin
 iosApp/obj
+PCLProject/bin
+PCLProject/obj
 .DS_Store
