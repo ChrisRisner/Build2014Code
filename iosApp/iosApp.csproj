@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B8BFD7FD-18C5-4DBA-8E96-488A130D96D3}</ProjectGuid>
+    <ProjectGuid>{808389D5-CCC0-42D2-9FC5-0AB800E02B8B}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>iosApp</RootNamespace>
@@ -80,10 +80,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PCLProject\PCLProject.csproj">
-      <Project>{860f7219-7f25-4b8f-b3d6-b0b88af9a81e}</Project>
-      <Name>PCLProject</Name>
-    </ProjectReference>
+    <Compile Include="MyViewController.cs" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default@2x.png" />
+    <BundleResource Include="Resources\Default-568h@2x.png" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
