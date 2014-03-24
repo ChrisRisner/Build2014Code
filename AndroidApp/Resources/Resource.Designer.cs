@@ -63,6 +63,27 @@ namespace AndroidApp
 			// aapt resource value: 0x7f050000
 			public const int MyButton = 2131034112;
 			
+			// aapt resource value: 0x7f050007
+			public const int btnSend = 2131034119;
+			
+			// aapt resource value: 0x7f050001
+			public const int linearLayout1 = 2131034113;
+			
+			// aapt resource value: 0x7f050004
+			public const int linearLayout2 = 2131034116;
+			
+			// aapt resource value: 0x7f050002
+			public const int textView1 = 2131034114;
+			
+			// aapt resource value: 0x7f050005
+			public const int textView2 = 2131034117;
+			
+			// aapt resource value: 0x7f050003
+			public const int txtMessage = 2131034115;
+			
+			// aapt resource value: 0x7f050006
+			public const int txtSendTo = 2131034118;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -97,6 +118,15 @@ namespace AndroidApp
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int message = 2130968578;
+			
+			// aapt resource value: 0x7f040004
+			public const int send = 2130968580;
+			
+			// aapt resource value: 0x7f040003
+			public const int sendto = 2130968579;
 			
 			static String()
 			{

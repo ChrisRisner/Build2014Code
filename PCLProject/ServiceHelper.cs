@@ -16,6 +16,8 @@ namespace PCLProject
             "dzNaYWHsgVGMMQBdNSeJuSccnzfVbN88"
         );
 
+        IMobileServiceTable<MessageObject> MessagesTable;
+
         public static async void RecordClick()
         {
             Class1 result = await MobileService.InvokeApiAsync<Class1>("ClickApi", HttpMethod.Get, null);
@@ -27,6 +29,15 @@ namespace PCLProject
             //MobileService.InvokeApiAsync<Class1>()
             Class1 result = await MobileService.InvokeApiAsync<Class1, Class1>("ClickApi", payload, HttpMethod.Post, null);
             //Class1 result = await MobileService.InvokeApiAsync<Class1>("ClickApi", HttpMethod.Get, null);
+        }
+
+        public async void SendMessage(MessageObject message)
+        {
+            if (MessagesTable == null)
+            {
+                MessagesTable = MobileService.GetTable<MessageObject>();
+            }
+            await MessagesTable.InsertAsync(message);
         }
     }
 }

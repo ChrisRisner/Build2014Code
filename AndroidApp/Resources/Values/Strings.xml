@@ -2,4 +2,7 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">AndroidApp</string>
+    <string name="message">Message:</string>
+    <string name="sendto">Send To:</string>
+    <string name="send">Send</string>
 </resources>
