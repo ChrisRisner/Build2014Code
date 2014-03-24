@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCLProject;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,17 @@ namespace WinStoreApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private int mCount = 0;
+
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            btnTap.Content = "Tapped " + ++mCount + " Times";
+            ServiceHelper.RecordClick(mCount, "WinStore");
         }
     }
 }

@@ -7,5 +7,7 @@ namespace PCLProject
 {
     public class Class1
     {
+        public int Count { get; set; }
+        public string Platform { get; set; }
     }
 }

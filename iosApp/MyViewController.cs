@@ -1,6 +1,7 @@
 using System;
 using MonoTouch.UIKit;
 using System.Drawing;
+using PCLProject;
 
 namespace iosApp
 {
@@ -36,6 +37,8 @@ namespace iosApp
             button.TouchUpInside += (object sender, EventArgs e) =>
             {
                 button.SetTitle(String.Format("clicked {0} times", numClicks++), UIControlState.Normal);
+                //PCLProject.ServiceHelper.RecordClick();
+                ServiceHelper.RecordClick(numClicks, "ios");
             };
 
             button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleTopMargin |
