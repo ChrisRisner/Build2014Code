@@ -80,6 +80,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PCLProject\PCLProject.csproj">
+      <Project>{860f7219-7f25-4b8f-b3d6-b0b88af9a81e}</Project>
+      <Name>PCLProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
