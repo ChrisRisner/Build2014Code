@@ -2,4 +2,6 @@ WinStoreApp/bin
 WinStoreApp/obj
 WinPhoneApp/bin
 WinPhoneApp/obj
+AndroidApp/bin
+AndroidApp/obj
 .DS_Store
