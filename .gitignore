@@ -9,9 +9,9 @@ iosApp/obj
 PCLProject/bin
 PCLProject/obj
 .DS_Store
-ServiceBusRelayHost/src/ServiceBusRelayHost/bin
-ServiceBusRelayHost/src/ServiceBusRelayHost/obj
-ServiceBusRelayHost/src/ServiceBusRelayHost.Demo.Screen/bin
-ServiceBusRelayHost/src/ServiceBusRelayHost.Demo.Screen/obj
-ServiceBusRelayHost/src/ServiceBusRelayHost.Tests/bin
-ServiceBusRelayHost/src/ServiceBusRelayHost.Tests/obj
+ServiceBus/src/ServiceBusRelayHost/bin
+ServiceBus/src/ServiceBusRelayHost/obj
+ServiceBus/src/ServiceBusRelayHost.Demo.Screen/bin
+ServiceBus/src/ServiceBusRelayHost.Demo.Screen/obj
+ServiceBus/src/ServiceBusRelayHost.Tests/bin
+ServiceBus/src/ServiceBusRelayHost.Tests/obj
