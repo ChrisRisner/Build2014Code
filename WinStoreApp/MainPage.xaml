@@ -9,6 +9,11 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button x:Name="btnTap" Content="Tap Me" HorizontalAlignment="Left" Margin="645,252,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="66,87,0,0" TextWrapping="Wrap" Text="Message:" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="66,149,0,0" TextWrapping="Wrap" Text="Send To:" VerticalAlignment="Top" FontSize="26"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Margin="200,87,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="382"/>
+        <TextBox x:Name="txtSendTo" HorizontalAlignment="Left" Margin="200,149,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="382"/>
+        <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Margin="200,234,0,0" VerticalAlignment="Top" Width="264" Click="btnSend_Click"/>
 
     </Grid>
 </Page>

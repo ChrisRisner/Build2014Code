@@ -35,5 +35,13 @@ namespace WinStoreApp
             btnTap.Content = "Tapped " + ++mCount + " Times";
             ServiceHelper.RecordClick(mCount, "WinStore");
         }
+
+        private void btnSend_Click(object sender, RoutedEventArgs e)
+        {
+            MessageObject message = new MessageObject() { Text = txtMessage.Text, Recipient = txtSendTo.Text };
+
+            ServiceHelper helper = new ServiceHelper();
+            helper.SendMessage(message);
+        }
     }
 }
