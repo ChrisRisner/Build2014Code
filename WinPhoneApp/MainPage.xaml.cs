@@ -9,6 +9,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using WinPhoneApp.Resources;
 using PCLProject;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace WinPhoneApp
 {
@@ -22,6 +23,27 @@ namespace WinPhoneApp
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void btnSend_Click(object sender, RoutedEventArgs e)
+        {
+            MessageObject message = new MessageObject() { Text = txtMessage.Text, Recipient = txtSendTo.Text };
+
+            ServiceHelper helper = new ServiceHelper();
+            helper.SendMessage(message);
+        }
+
+        private async void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MobileServiceClient client = (MobileServiceClient)ServiceHelper.MobileService;
+                ServiceHelper.MobileService.CurrentUser = await client.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+            }
+            catch (Exception ex)
+            {
+                PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
+            }
         }
 
         // Sample code for building a localized ApplicationBar

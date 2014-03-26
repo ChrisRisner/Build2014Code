@@ -47,6 +47,12 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock HorizontalAlignment="Left" Margin="31,29,0,0" TextWrapping="Wrap" Text="Message:" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="-0.118,0.432"/>
+            <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="72" Margin="176,15,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270"/>
+            <TextBlock HorizontalAlignment="Left" Margin="31,109,0,0" TextWrapping="Wrap" Text="Send To:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="txtSendTo" HorizontalAlignment="Left" Height="72" Margin="176,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270"/>
+            <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Margin="31,183,0,0" VerticalAlignment="Top" Width="415" Click="btnSend_Click"/>
+            <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="31,282,0,0" VerticalAlignment="Top" Width="415" Click="btnLogin_Click"/>
 
         </Grid>
 
