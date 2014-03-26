@@ -17,7 +17,23 @@ namespace PCLProject
         );
 
         IMobileServiceTable<MessageObject> MessagesTable;
+        //private MobileServiceUser user;
+        //public MobileServiceUser User { get { return user; } }
 
+
+        public async Task Authenticate()//UIViewController view)
+        {
+            try
+            {
+                //MobileService.CurrentUser = await MobileService.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+                MobileService.CurrentUser = await MobileService.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, null);
+                //user = await client.LoginAsync(view, MobileServiceAuthenticationProvider.MicrosoftAccount);
+            }
+            catch (Exception ex)
+            {
+                PlatformSpecific.GetInstance().LogInfo("ERROR - AUTHENTICATION FAILED:" + ex.Message);
+            }
+        }
         public static async void RecordClick()
         {
             Class1 result = await MobileService.InvokeApiAsync<Class1>("ClickApi", HttpMethod.Get, null);

@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using WinPhoneApp.Resources;
+using PCLProject;
 
 namespace WinPhoneApp
 {
@@ -17,6 +18,7 @@ namespace WinPhoneApp
         public MainPage()
         {
             InitializeComponent();
+            
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();

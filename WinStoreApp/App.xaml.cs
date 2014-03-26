@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCLProject;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -32,6 +33,7 @@ namespace WinStoreApp
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            PlatformSpecific.SetPlatform(new WinStoreSpecific());
         }
 
         /// <summary>

@@ -1,4 +1,5 @@
-﻿using PCLProject;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using PCLProject;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -42,6 +43,15 @@ namespace WinStoreApp
 
             ServiceHelper helper = new ServiceHelper();
             helper.SendMessage(message);
+        }
+
+        private async void btnAuthenticate_Click(object sender, RoutedEventArgs e)
+        {
+            //ServiceHelper helper = new ServiceHelper();
+            //helper.Authenticate();
+            //await ServiceHelper.MobileService.LoginAsync(Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, null);
+            MobileServiceClient client = (MobileServiceClient)ServiceHelper.MobileService;
+            ServiceHelper.MobileService.CurrentUser = await client.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
         }
     }
 }
