@@ -18,6 +18,7 @@ namespace AndroidApp
         int count = 1;
         EditText mTxtRecipient;
         EditText mTxtMessage;
+        Button mBtnLogin;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -32,7 +33,8 @@ namespace AndroidApp
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.MyButton);
             Button btnSend = FindViewById<Button>(Resource.Id.btnSend);
-            Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
+            Button btnGetContacts = FindViewById<Button>(Resource.Id.btnGetContacts);
+            mBtnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             mTxtMessage = FindViewById<EditText>(Resource.Id.txtMessage);
             mTxtRecipient = FindViewById<EditText>(Resource.Id.txtSendTo);
 
@@ -47,7 +49,8 @@ namespace AndroidApp
                 tappedSend((View) sender);
             };
 
-            btnLogin.Click += delegate { tappedLogin(); };
+            mBtnLogin.Click += delegate { tappedLogin(); };
+            btnGetContacts.Click += delegate { tappedGetContacts(); };
 
 
             string senders = "540255930025";
@@ -66,18 +69,16 @@ namespace AndroidApp
         }
 
         private async void tappedLogin()
-        {
-            /*
-            try
+        {            
+            if (await ServiceHelper.GetInstance().Authenticate(this))
             {
-                ServiceHelper.MobileService.CurrentUser = await ServiceHelper.MobileService.LoginAsync(this, MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+                mBtnLogin.Text = GetString(Resource.String.logout);
             }
-            catch (Exception ex)
-            {
-                PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
-            }*/
+        }
 
-            await ServiceHelper.GetInstance().Authenticate(this);
+        private async void tappedGetContacts()
+        {
+            await ServiceHelper.GetInstance().GetContacts();
         }
     }
 }

@@ -49,15 +49,19 @@ namespace PCLProject
 
         }
 
-        public async Task Authenticate(object uiObject)//UIViewController view)
+        public async Task<bool> Authenticate(object uiObject)//UIViewController view)
         {
             try
             {
+                if (MobileService.CurrentUser != null && !string.IsNullOrEmpty(MobileService.CurrentUser.UserId))
+                    return true;
                 ServiceHelper.MobileService.CurrentUser = await PlatformSpecific.GetInstance().Authenticate(MobileService, uiObject);
+                return true;
             }
             catch (Exception ex)
             {
                 PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
+                return false;
             }
         }
         public async void RecordClick()

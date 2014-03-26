@@ -69,6 +69,8 @@ namespace ServiceBusRelayHost.Demo.Screen
     {
         public HttpResponseMessage Get()
         {
+            
+            Console.WriteLine("Received Contacts Request");
             //var content = new StreamContent(ScreenCapturer.GetEncodedByteStream());
             //content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
 
@@ -87,9 +89,10 @@ namespace ServiceBusRelayHost.Demo.Screen
             var contacts = new
             {
                 items = new[] {
-                new {name= "friend1"},
-                new {name="friend2"},
-                new {name="friend3"}
+                new {name= "AndroidUser"},
+                new {name="iOSUser"},
+                new {name="WindowsUser"},
+                new {name="WindowsPhoneUser"}
             }
             };
 
