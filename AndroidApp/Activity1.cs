@@ -32,6 +32,7 @@ namespace AndroidApp
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.MyButton);
             Button btnSend = FindViewById<Button>(Resource.Id.btnSend);
+            Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             mTxtMessage = FindViewById<EditText>(Resource.Id.txtMessage);
             mTxtRecipient = FindViewById<EditText>(Resource.Id.txtSendTo);
 
@@ -45,15 +46,28 @@ namespace AndroidApp
             {
                 tappedSend((View) sender);
             };
+
+            btnLogin.Click += delegate { tappedLogin(); };
         }
-        
-        [Export]
+               
         public void tappedSend(View v)
         {
             MessageObject message = new MessageObject() { Text = mTxtMessage.Text, Recipient = mTxtRecipient.Text };
 
             ServiceHelper helper = new ServiceHelper();
             helper.SendMessage(message);
+        }
+
+        private async void tappedLogin()
+        {
+            try
+            {
+                ServiceHelper.MobileService.CurrentUser = await ServiceHelper.MobileService.LoginAsync(this, MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+            }
+            catch (Exception ex)
+            {
+                PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
+            }
         }
     }
 }

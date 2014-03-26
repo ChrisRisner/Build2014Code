@@ -63,6 +63,9 @@ namespace AndroidApp
 			// aapt resource value: 0x7f050000
 			public const int MyButton = 2131034112;
 			
+			// aapt resource value: 0x7f050008
+			public const int btnLogin = 2131034120;
+			
 			// aapt resource value: 0x7f050007
 			public const int btnSend = 2131034119;
 			
@@ -118,6 +121,9 @@ namespace AndroidApp
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
+			
+			// aapt resource value: 0x7f040005
+			public const int login = 2130968581;
 			
 			// aapt resource value: 0x7f040002
 			public const int message = 2130968578;
