@@ -28,7 +28,7 @@ namespace WinStoreApp
 
         public override async Task<MobileServiceUser> Authenticate(object msclient, object uiObject)
         {
-            MobileServiceClient client = (MobileServiceClient)uiObject;
+            MobileServiceClient client = (MobileServiceClient)msclient;
             return await client.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
         }
     }

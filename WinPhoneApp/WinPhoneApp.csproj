@@ -156,6 +156,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.WindowsAzure.Messaging">
+      <HintPath>..\packages\WindowsAzure.Messaging.Managed.0.1.7.6\lib\windowsphone8\Microsoft.WindowsAzure.Messaging.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.WindowsAzure.Mobile">
       <HintPath>..\packages\WindowsAzure.MobileServices.1.1.5\lib\wp8\Microsoft.WindowsAzure.Mobile.dll</HintPath>
     </Reference>

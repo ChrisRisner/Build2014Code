@@ -29,8 +29,7 @@ namespace WinPhoneApp
         {
             MessageObject message = new MessageObject() { Text = txtMessage.Text, Recipient = txtSendTo.Text };
 
-            ServiceHelper helper = new ServiceHelper();
-            helper.SendMessage(message);
+            ServiceHelper.GetInstance().SendMessage(message);
         }
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -44,8 +43,8 @@ namespace WinPhoneApp
             //{
             //    PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
             //}
-            ServiceHelper helper = new ServiceHelper();
-            await helper.Authenticate();
+            //ServiceHelper helper = new ServiceHelper();
+            await ServiceHelper.GetInstance().Authenticate(null);
         }
 
         // Sample code for building a localized ApplicationBar

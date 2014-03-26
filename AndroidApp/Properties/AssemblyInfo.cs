@@ -32,3 +32,8 @@ using Android.App;
 // Add some common permissions, these can be removed if not needed
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
+[assembly: Permission(Name = "com.SuperAwesome.Chat.permission.C2D_MESSAGE")]
+[assembly: UsesPermission(Name = "com.SuperAwesome.Chat.permission.C2D_MESSAGE")]
+[assembly: UsesPermission(Name = "com.google.android.c2dm.permission.RECEIVE")]
+[assembly: UsesPermission(Android.Manifest.Permission.GetAccounts)]
+[assembly: UsesPermission(Android.Manifest.Permission.WakeLock)]

@@ -23,7 +23,17 @@ namespace iosApp
 
             window.MakeKeyAndVisible();
 
+            UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert |
+        UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
+            UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes); 
+
+
             return true;
+        }
+
+        public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+        {
+            //Save registration ID
         }
     }
 }

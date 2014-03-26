@@ -39,7 +39,7 @@ namespace AndroidApp
             button.Click += 
                 delegate { 
                     button.Text = string.Format("{0} clicks!", count++);
-                    ServiceHelper.RecordClick(count, "Android");
+                    ServiceHelper.GetInstance().RecordClick(count, "Android");
                 };
 
             btnSend.Click += (sender, e) =>
@@ -48,14 +48,21 @@ namespace AndroidApp
             };
 
             btnLogin.Click += delegate { tappedLogin(); };
+
+
+            string senders = "540255930025";
+            Intent intent = new Intent("com.google.android.c2dm.intent.REGISTER");
+            intent.SetPackage("com.google.android.gsf");
+            intent.PutExtra("app", PendingIntent.GetBroadcast(this, 0, new Intent(), 0));
+            intent.PutExtra("sender", senders);
+            this.StartService(intent);
         }
                
         public void tappedSend(View v)
         {
             MessageObject message = new MessageObject() { Text = mTxtMessage.Text, Recipient = mTxtRecipient.Text };
 
-            ServiceHelper helper = new ServiceHelper();
-            helper.SendMessage(message);
+            ServiceHelper.GetInstance().SendMessage(message);
         }
 
         private async void tappedLogin()
@@ -70,8 +77,7 @@ namespace AndroidApp
                 PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
             }*/
 
-            ServiceHelper helper = new ServiceHelper();
-            await helper.Authenticate();
+            await ServiceHelper.GetInstance().Authenticate(this);
         }
     }
 }

@@ -34,15 +34,15 @@ namespace WinStoreApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             btnTap.Content = "Tapped " + ++mCount + " Times";
-            ServiceHelper.RecordClick(mCount, "WinStore");
+            ServiceHelper.GetInstance().RecordClick(mCount, "WinStore");
         }
 
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
             MessageObject message = new MessageObject() { Text = txtMessage.Text, Recipient = txtSendTo.Text };
 
-            ServiceHelper helper = new ServiceHelper();
-            helper.SendMessage(message);
+            
+            ServiceHelper.GetInstance().SendMessage(message);
         }
 
         private async void btnAuthenticate_Click(object sender, RoutedEventArgs e)
@@ -61,13 +61,12 @@ namespace WinStoreApp
                 PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
             }
              * */
-            ServiceHelper helper = new ServiceHelper();
-            await helper.Authenticate();
+            await ServiceHelper.GetInstance().Authenticate(null);
         }
 
         private async void btnGetContacts_Click(object sender, RoutedEventArgs e)
         {
-            await ServiceHelper.GetContacts();
+            await ServiceHelper.GetInstance().GetContacts();
         }
     }
 }

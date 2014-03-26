@@ -11,6 +11,21 @@ namespace PCLProject
 
     public class ServiceHelper
     {
+        private static ServiceHelper mHelper;
+
+        private ServiceHelper()
+        {
+
+        }
+        public static ServiceHelper GetInstance()
+        {
+            if (mHelper == null)
+            {
+                mHelper = new ServiceHelper();
+            }
+            return mHelper;
+        }
+
         public static MobileServiceClient MobileService = new MobileServiceClient(
             "https://chatdemo.azure-mobile.net/",
             "dzNaYWHsgVGMMQBdNSeJuSccnzfVbN88"
@@ -20,24 +35,37 @@ namespace PCLProject
         //private MobileServiceUser user;
         //public MobileServiceUser User { get { return user; } }
 
+        private string PushIdentifier { get; set; }
 
-        public async Task Authenticate()//UIViewController view)
+        public void SetPushIdentifier(string pushIdentifier)
+        {
+            this.PushIdentifier = pushIdentifier;
+            //Authenticate if user is already logged in
+            if (MobileService.CurrentUser != null &&
+                !String.IsNullOrEmpty(MobileService.CurrentUser.UserId))
+            {
+                //Register with notification hubs
+            }
+
+        }
+
+        public async Task Authenticate(object uiObject)//UIViewController view)
         {
             try
             {
-                ServiceHelper.MobileService.CurrentUser = await PlatformSpecific.GetInstance().Authenticate(MobileService, null);
+                ServiceHelper.MobileService.CurrentUser = await PlatformSpecific.GetInstance().Authenticate(MobileService, uiObject);
             }
             catch (Exception ex)
             {
                 PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
             }
         }
-        public static async void RecordClick()
+        public async void RecordClick()
         {
             Class1 result = await MobileService.InvokeApiAsync<Class1>("ClickApi", HttpMethod.Get, null);
         }
 
-        public static async void RecordClick(int count, String platform)
+        public async void RecordClick(int count, String platform)
         {
             Class1 payload = new Class1() { Count = count, Platform = platform };
             //MobileService.InvokeApiAsync<Class1>()
@@ -45,7 +73,7 @@ namespace PCLProject
             //Class1 result = await MobileService.InvokeApiAsync<Class1>("ClickApi", HttpMethod.Get, null);
         }
 
-        public static async Task<List<string>> GetContacts()
+        public async Task<List<string>> GetContacts()
         {
             List<string> result = await MobileService.InvokeApiAsync<Class1, List<string>>("GetContacts", null, HttpMethod.Get, null);
             

@@ -38,7 +38,7 @@ namespace iosApp
             {
                 button.SetTitle(String.Format("clicked {0} times", numClicks++), UIControlState.Normal);
                 //PCLProject.ServiceHelper.RecordClick();
-                ServiceHelper.RecordClick(numClicks, "ios");
+                ServiceHelper.GetInstance().RecordClick(numClicks, "ios");
             };
 
             button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleTopMargin |

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>WindowsAzure.Messaging.Managed</id>
+    <version>0.1.7.6</version>
+    <title>Windows Azure Service Bus managed for Windows Store and Windows Phone 8</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=218949</licenseUrl>
+    <projectUrl>http://go.microsoft.com/fwlink/?LinkId=218964</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288890</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Use this with Windows Azure Service Bus and Notification Hubs client registration (for Windows Store and Windows Phone 8 apps). It adds Microsoft.WindowsAzure.Messaging.Managed.dll to your project. 
+This package is for developing Windows Store and Windows Phone 8 applications with C# (managed)</description>
+    <releaseNotes>Fixes Notification Hubs duplicate registration problem.</releaseNotes>
+    <copyright />
+    <language>en-US</language>
+    <tags>ServiceBus Microsoft Azure Messaging PubSub Publish Subscribe Queue Topic Service Bus windowsazureofficial NotificationHub Notification Hub Notifications push windows store phone</tags>
+  </metadata>
+</package>
