@@ -35,15 +35,17 @@ namespace WinPhoneApp
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                MobileServiceClient client = (MobileServiceClient)ServiceHelper.MobileService;
-                ServiceHelper.MobileService.CurrentUser = await client.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
-            }
-            catch (Exception ex)
-            {
-                PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
-            }
+            //try
+            //{
+            //    MobileServiceClient client = (MobileServiceClient)ServiceHelper.MobileService;
+            //    ServiceHelper.MobileService.CurrentUser = await client.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+            //}
+            //catch (Exception ex)
+            //{
+            //    PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
+            //}
+            ServiceHelper helper = new ServiceHelper();
+            await helper.Authenticate();
         }
 
         // Sample code for building a localized ApplicationBar

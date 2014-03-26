@@ -60,6 +60,7 @@ namespace AndroidApp
 
         private async void tappedLogin()
         {
+            /*
             try
             {
                 ServiceHelper.MobileService.CurrentUser = await ServiceHelper.MobileService.LoginAsync(this, MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
@@ -67,7 +68,10 @@ namespace AndroidApp
             catch (Exception ex)
             {
                 PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
-            }
+            }*/
+
+            ServiceHelper helper = new ServiceHelper();
+            await helper.Authenticate();
         }
     }
 }

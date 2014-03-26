@@ -1,4 +1,5 @@
-﻿using PCLProject;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using PCLProject;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -24,5 +25,11 @@ namespace WinStoreApp
 		public override void LogInfo(string info) {
             Debug.WriteLine("Info: " + info);
 		}
+
+        public override async Task<MobileServiceUser> Authenticate(object msclient, object uiObject)
+        {
+            MobileServiceClient client = (MobileServiceClient)uiObject;
+            return await client.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+        }
     }
 }

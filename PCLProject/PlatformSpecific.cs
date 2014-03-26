@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,5 +34,7 @@ namespace PCLProject
         public abstract void LogPlatform();
 
         public abstract void LogInfo(string info);
+
+        public abstract Task<MobileServiceUser> Authenticate(object msclient, object uiObject);
     }
 }

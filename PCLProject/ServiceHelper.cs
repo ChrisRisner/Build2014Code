@@ -25,13 +25,11 @@ namespace PCLProject
         {
             try
             {
-                //MobileService.CurrentUser = await MobileService.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
-                MobileService.CurrentUser = await MobileService.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, null);
-                //user = await client.LoginAsync(view, MobileServiceAuthenticationProvider.MicrosoftAccount);
+                ServiceHelper.MobileService.CurrentUser = await PlatformSpecific.GetInstance().Authenticate(MobileService, null);
             }
             catch (Exception ex)
             {
-                PlatformSpecific.GetInstance().LogInfo("ERROR - AUTHENTICATION FAILED:" + ex.Message);
+                PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
             }
         }
         public static async void RecordClick()

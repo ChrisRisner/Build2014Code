@@ -50,7 +50,8 @@ namespace WinStoreApp
             //ServiceHelper helper = new ServiceHelper();
             //helper.Authenticate();
             //await ServiceHelper.MobileService.LoginAsync(Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, null);
-            try
+            
+            /*try
             {
                 MobileServiceClient client = (MobileServiceClient)ServiceHelper.MobileService;
                 ServiceHelper.MobileService.CurrentUser = await client.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
@@ -59,6 +60,9 @@ namespace WinStoreApp
             {
                 PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
             }
+             * */
+            ServiceHelper helper = new ServiceHelper();
+            await helper.Authenticate();
         }
 
         private async void btnGetContacts_Click(object sender, RoutedEventArgs e)
