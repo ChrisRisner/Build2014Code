@@ -15,6 +15,7 @@
         <TextBox x:Name="txtSendTo" HorizontalAlignment="Left" Margin="200,149,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="382"/>
         <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Margin="200,234,0,0" VerticalAlignment="Top" Width="264" Click="btnSend_Click"/>
         <Button x:Name="btnAuthenticate" Content="Authenticate" HorizontalAlignment="Left" Margin="216,340,0,0" VerticalAlignment="Top" Width="144" Click="btnAuthenticate_Click"/>
+        <Button x:Name="btnGetContacts" Content="Get Contacts" HorizontalAlignment="Left" Margin="669,180,0,0" VerticalAlignment="Top" Click="btnGetContacts_Click"/>
 
     </Grid>
 </Page>

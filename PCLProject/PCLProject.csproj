@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Contact.cs" />
     <Compile Include="MessageObject.cs" />
     <Compile Include="PlatformSpecific.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
