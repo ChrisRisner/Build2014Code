@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Networking.PushNotifications;
+using Windows.UI.Popups;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -36,6 +38,20 @@ namespace WinStoreApp
             PlatformSpecific.SetPlatform(new WinStoreSpecific());
         }
 
+        private async void InitNotificationsAsync()
+        {
+            // Request a push notification channel.
+            var channel =
+                await PushNotificationChannelManager
+                    .CreatePushNotificationChannelForApplicationAsync();
+
+            // Register for notifications using the new channel
+            //await MobileService.GetPush().RegisterNativeAsync(channel.Uri);
+            ServiceHelper.GetInstance().SetPushIdentifier(channel.Uri);
+
+            PlatformSpecific.GetInstance().LogInfo("Push uri: " + channel.Uri);
+        }
+
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -43,7 +59,7 @@ namespace WinStoreApp
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-
+            InitNotificationsAsync();
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {

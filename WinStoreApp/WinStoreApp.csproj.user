@@ -3,4 +3,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <UseSimulator>False</UseSimulator>
   </PropertyGroup>
+  <PropertyGroup>
+    <AppxShowAllApps>False</AppxShowAllApps>
+  </PropertyGroup>
 </Project>

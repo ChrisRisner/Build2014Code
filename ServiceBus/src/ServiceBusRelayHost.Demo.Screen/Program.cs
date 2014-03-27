@@ -78,7 +78,7 @@ namespace ServiceBusRelayHost.Demo.Screen
             array.Add("AllUsers");
             array.Add("AndroidUser");
             array.Add("iOSUser");
-            array.Add("WindowsUser");
+            array.Add("WinStoreUser");
             array.Add("WindowsPhoneUser");
             //array.Add(new DateTime(2000, 5, 23));
 
@@ -87,7 +87,7 @@ namespace ServiceBusRelayHost.Demo.Screen
 
             string json = array.ToString();
 
-            
+            /*
             var contacts = new
             {
                 items = new[] {
@@ -96,7 +96,7 @@ namespace ServiceBusRelayHost.Demo.Screen
                 new {name="WindowsUser"},
                 new {name="WindowsPhoneUser"}
             }
-            };
+            };*/
 
             var resp = new HttpResponseMessage()
             {
