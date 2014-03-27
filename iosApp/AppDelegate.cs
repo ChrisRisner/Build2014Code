@@ -4,6 +4,7 @@ using System.Linq;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using PCLProject;
 
 
 namespace iosApp
@@ -34,6 +35,20 @@ namespace iosApp
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
             //Save registration ID
+            ServiceHelper.GetInstance().SetPushIdentifier(deviceToken.ToString());
+        }
+
+        public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
+        {
+            NSDictionary aps = userInfo.ObjectForKey(new NSString("aps")) as NSDictionary;
+            string alert = string.Empty;
+            if (aps.ContainsKey(new NSString("alert")))
+                alert = (aps[new NSString("alert")] as NSString).ToString();
+            if (!string.IsNullOrEmpty(alert))
+            {
+                UIAlertView avAlert = new UIAlertView("Notification", alert, null, "OK", null);
+                avAlert.Show();
+            }       
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using MonoTouch.UIKit;
 using System.Drawing;
 using PCLProject;
+using System.Collections.Generic;
 
 namespace iosApp
 {
@@ -17,6 +18,8 @@ namespace iosApp
         UITextField mTxtUsername;
         UITextField mTxtMessage;
         UITextField mTxtSendTo;
+        UIPickerView mPickerView;
+        ListPickerViewModel<string> mPickerViewModel;
         int numClicks = 0;
         float buttonWidth = 200;
         float buttonHeight = 50;
@@ -58,6 +61,13 @@ namespace iosApp
                 buttonWidth,
                 buttonHeight);
             mBtnGetContacts.Frame = new RectangleF(
+                View.Frame.Width / 2 - buttonWidth / 2,
+                10 + buttonHeight * 3 + labelHeight * 3,
+                buttonWidth,
+                buttonHeight);
+
+            mPickerView = new UIPickerView();
+            mPickerView.Frame = new RectangleF(
                 View.Frame.Width / 2 - buttonWidth / 2,
                 10 + buttonHeight * 3 + labelHeight * 3,
                 buttonWidth,
@@ -112,6 +122,37 @@ namespace iosApp
                 ServiceHelper.GetInstance().RecordClick(numClicks, "ios");
             };
 
+            mBtnSend.TouchUpInside += (object sender, EventArgs e) =>
+            {
+                MessageObject message = new MessageObject() { Text = mTxtMessage.Text, Recipient = mTxtSendTo.Text };
+                ServiceHelper.GetInstance().SendMessage(message);
+            };
+
+            mBtnLogin.TouchUpInside += async (object sender, EventArgs e) =>
+            {
+                if (await ServiceHelper.GetInstance().Authenticate(mTxtUsername.Text, this))
+                {
+                    mBtnLogin.SetTitle("Logout", UIControlState.Normal);
+                }
+            };
+
+            mBtnGetContacts.TouchUpInside += async (object sender, EventArgs e) =>
+            {
+                List<string> contacts = await ServiceHelper.GetInstance().GetContacts();
+                if (contacts != null && contacts.Count > 0)
+                {
+                    mPickerViewModel = new ListPickerViewModel<string>(contacts);
+                    mPickerView.Model = mPickerViewModel;
+                    mPickerViewModel.ValueChanged += (pickerSender, pickerArgs) =>
+                    {
+                        this.mTxtSendTo.Text = mPickerViewModel.SelectedItem.ToString();
+                    };
+                    //ArrayAdapter adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, contacts);
+                    //adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                    //mDdlContacts.Adapter = adapter;
+                }
+            };
+
             mBtnClickMe.AutoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleTopMargin |
                 UIViewAutoresizing.FlexibleBottomMargin;
 
@@ -125,6 +166,7 @@ namespace iosApp
             View.AddSubview(mBtnSend);
             View.AddSubview(mBtnLogin);
             View.AddSubview(mBtnGetContacts);
+            View.AddSubview(mPickerView);
         }
 
     }

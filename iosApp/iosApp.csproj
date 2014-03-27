@@ -93,7 +93,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ContactPickerView.cs" />
     <Compile Include="iOSSpecific.cs" />
+    <Compile Include="ListPickerViewModel.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="app.config" />

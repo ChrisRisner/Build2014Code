@@ -16,6 +16,7 @@ namespace PCLProject
         private ServiceHelper()
         {
             this.Username = "TempUsername";
+            this.PushIdentifier = null;
         }
         public static ServiceHelper GetInstance()
         {
@@ -74,20 +75,23 @@ namespace PCLProject
 
         private async void RegisterWithNotificationHubs()
         {
-            NotificationHubRegistration registration = new NotificationHubRegistration()
-                            {
-                                Platform = PlatformSpecific.GetInstance().Platform,
-                                PushIdentifier = this.PushIdentifier,
-                                Username = this.Username
-                            };
-            var response = await MobileService.InvokeApiAsync<NotificationHubRegistration, ApiResponse>("RegisterforPush", registration);
-            if (response.Message == "Registered")
-            {
-                PlatformSpecific.GetInstance().LogInfo("Registered with Notification Hubs");
-            }
-            else
-            {
-                PlatformSpecific.GetInstance().LogInfo("Issue registering for Notification Hubs");
+            if (!String.IsNullOrEmpty(this.PushIdentifier))
+            {                
+                NotificationHubRegistration registration = new NotificationHubRegistration()
+                                {
+                                    Platform = PlatformSpecific.GetInstance().Platform,
+                                    PushIdentifier = this.PushIdentifier,
+                                    Username = this.Username
+                                };
+                var response = await MobileService.InvokeApiAsync<NotificationHubRegistration, ApiResponse>("RegisterforPush", registration);
+                if (response.Message == "Registered")
+                {
+                    PlatformSpecific.GetInstance().LogInfo("Registered with Notification Hubs");
+                }
+                else
+                {
+                    PlatformSpecific.GetInstance().LogInfo("Issue registering for Notification Hubs");
+                }
             }
         }
 
