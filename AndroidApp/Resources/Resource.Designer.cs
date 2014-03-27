@@ -72,6 +72,9 @@ namespace AndroidApp
 			// aapt resource value: 0x7f05000a
 			public const int btnSend = 2131034122;
 			
+			// aapt resource value: 0x7f05000d
+			public const int ddlContacts = 2131034125;
+			
 			// aapt resource value: 0x7f050001
 			public const int linearLayout0 = 2131034113;
 			

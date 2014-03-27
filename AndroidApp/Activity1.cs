@@ -9,6 +9,7 @@ using Android.OS;
 using Microsoft.WindowsAzure.MobileServices;
 using PCLProject;
 using Java.Interop;
+using System.Collections.Generic;
 
 namespace AndroidApp
 {
@@ -20,6 +21,7 @@ namespace AndroidApp
         EditText mTxtMessage;
         Button mBtnLogin;
         EditText mTxtUsername;
+        Spinner mDdlContacts;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -39,6 +41,12 @@ namespace AndroidApp
             mTxtMessage = FindViewById<EditText>(Resource.Id.txtMessage);
             mTxtRecipient = FindViewById<EditText>(Resource.Id.txtSendTo);
             mTxtUsername = FindViewById<EditText>(Resource.Id.txtUsername);
+            mDdlContacts = FindViewById<Spinner>(Resource.Id.ddlContacts);
+
+            mDdlContacts.ItemSelected += (sender, e) =>
+            {
+                selectedContact((Spinner)sender, e);
+            };
 
             button.Click += 
                 delegate { 
@@ -62,7 +70,12 @@ namespace AndroidApp
             intent.PutExtra("sender", senders);
             this.StartService(intent);
         }
-               
+
+        public void selectedContact(Spinner sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            //Toast.MakeText(this, "Selected: " + sender.GetItemAtPosition(e.Position), ToastLength.Long).Show();
+            mTxtRecipient.Text = sender.GetItemAtPosition(e.Position).ToString();
+        }
         public void tappedSend(View v)
         {
             MessageObject message = new MessageObject() { Text = mTxtMessage.Text, Recipient = mTxtRecipient.Text };
@@ -80,7 +93,15 @@ namespace AndroidApp
 
         private async void tappedGetContacts()
         {
-            await ServiceHelper.GetInstance().GetContacts();
+            List<string> contacts = await ServiceHelper.GetInstance().GetContacts();
+            if (contacts != null && contacts.Count > 0)
+            {
+
+
+                ArrayAdapter adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, contacts);
+                adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                mDdlContacts.Adapter = adapter;
+            }
         }
     }
 }

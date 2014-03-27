@@ -75,9 +75,11 @@ namespace ServiceBusRelayHost.Demo.Screen
             //content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
 
             JArray array = new JArray();
-            array.Add("friend1");
-            array.Add("friend2");
-            array.Add("friend3");
+            array.Add("AllUsers");
+            array.Add("AndroidUser");
+            array.Add("iOSUser");
+            array.Add("WindowsUser");
+            array.Add("WindowsPhoneUser");
             //array.Add(new DateTime(2000, 5, 23));
 
             JObject o = new JObject();
