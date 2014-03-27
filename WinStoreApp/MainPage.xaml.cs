@@ -66,7 +66,17 @@ namespace WinStoreApp
 
         private async void btnGetContacts_Click(object sender, RoutedEventArgs e)
         {
-            await ServiceHelper.GetInstance().GetContacts();
+            List<string> contacts = await ServiceHelper.GetInstance().GetContacts();
+            if (contacts != null && contacts.Count > 0)
+            {
+                //ddlContacts.ItemsSource = contacts;
+                ddlContacts.ItemsSource = contacts;
+            }
+        }
+
+        private void ddlContacts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txtSendTo.Text = ddlContacts.SelectedItem.ToString();
         }
     }
 }
