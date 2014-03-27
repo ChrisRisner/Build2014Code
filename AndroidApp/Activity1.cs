@@ -19,6 +19,7 @@ namespace AndroidApp
         EditText mTxtRecipient;
         EditText mTxtMessage;
         Button mBtnLogin;
+        EditText mTxtUsername;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -37,6 +38,7 @@ namespace AndroidApp
             mBtnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             mTxtMessage = FindViewById<EditText>(Resource.Id.txtMessage);
             mTxtRecipient = FindViewById<EditText>(Resource.Id.txtSendTo);
+            mTxtUsername = FindViewById<EditText>(Resource.Id.txtUsername);
 
             button.Click += 
                 delegate { 
@@ -70,7 +72,7 @@ namespace AndroidApp
 
         private async void tappedLogin()
         {            
-            if (await ServiceHelper.GetInstance().Authenticate(this))
+            if (await ServiceHelper.GetInstance().Authenticate(mTxtUsername.Text, this))
             {
                 mBtnLogin.Text = GetString(Resource.String.logout);
             }

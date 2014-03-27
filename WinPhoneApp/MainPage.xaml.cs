@@ -44,7 +44,7 @@ namespace WinPhoneApp
             //    PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
             //}
             //ServiceHelper helper = new ServiceHelper();
-            await ServiceHelper.GetInstance().Authenticate(null);
+            await ServiceHelper.GetInstance().Authenticate("WinPhoneUser", null);
         }
 
         // Sample code for building a localized ApplicationBar

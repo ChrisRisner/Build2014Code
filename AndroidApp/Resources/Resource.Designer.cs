@@ -97,7 +97,7 @@ namespace AndroidApp
 			public const int txtSendTo = 2131034121;
 			
 			// aapt resource value: 0x7f050003
-			public const int txtYourName = 2131034115;
+			public const int txtUsername = 2131034115;
 			
 			static Id()
 			{

@@ -24,7 +24,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/txtYourName"
+            android:id="@+id/txtUsername"
             android:text="@string/user_name" />
     </LinearLayout>
     <LinearLayout

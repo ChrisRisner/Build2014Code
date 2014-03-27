@@ -15,7 +15,7 @@ namespace PCLProject
 
         private ServiceHelper()
         {
-
+            this.Username = "TempUsername";
         }
         public static ServiceHelper GetInstance()
         {
@@ -36,26 +36,33 @@ namespace PCLProject
         //public MobileServiceUser User { get { return user; } }
 
         private string PushIdentifier { get; set; }
+        public string Username { get; set; }
 
         public void SetPushIdentifier(string pushIdentifier)
         {
             this.PushIdentifier = pushIdentifier;
+            //placeholder for testing
+            //RegisterWithNotificationHubs();
+
             //Authenticate if user is already logged in
             if (MobileService.CurrentUser != null &&
                 !String.IsNullOrEmpty(MobileService.CurrentUser.UserId))
             {
                 //Register with notification hubs
+                RegisterWithNotificationHubs();
             }
 
         }
 
-        public async Task<bool> Authenticate(object uiObject)//UIViewController view)
+        public async Task<bool> Authenticate(String username, object uiObject)//UIViewController view)
         {
             try
-            {
+            {                
                 if (MobileService.CurrentUser != null && !string.IsNullOrEmpty(MobileService.CurrentUser.UserId))
                     return true;
+                this.Username = username;
                 ServiceHelper.MobileService.CurrentUser = await PlatformSpecific.GetInstance().Authenticate(MobileService, uiObject);
+                RegisterWithNotificationHubs();
                 return true;
             }
             catch (Exception ex)
@@ -64,6 +71,26 @@ namespace PCLProject
                 return false;
             }
         }
+
+        private async void RegisterWithNotificationHubs()
+        {
+            NotificationHubRegistration registration = new NotificationHubRegistration()
+                            {
+                                Platform = PlatformSpecific.GetInstance().Platform,
+                                PushIdentifier = this.PushIdentifier,
+                                Username = this.Username
+                            };
+            var response = await MobileService.InvokeApiAsync<NotificationHubRegistration, ApiResponse>("RegisterforPush", registration);
+            if (response.Message == "Registered")
+            {
+                PlatformSpecific.GetInstance().LogInfo("Registered with Notification Hubs");
+            }
+            else
+            {
+                PlatformSpecific.GetInstance().LogInfo("Issue registering for Notification Hubs");
+            }
+        }
+
         public async void RecordClick()
         {
             Class1 result = await MobileService.InvokeApiAsync<Class1>("ClickApi", HttpMethod.Get, null);

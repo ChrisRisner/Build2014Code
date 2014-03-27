@@ -61,7 +61,7 @@ namespace WinStoreApp
                 PlatformSpecific.GetInstance().LogInfo("Error authenticating: " + ex.Message);
             }
              * */
-            await ServiceHelper.GetInstance().Authenticate(null);
+            await ServiceHelper.GetInstance().Authenticate("WinStoreUser", null);
         }
 
         private async void btnGetContacts_Click(object sender, RoutedEventArgs e)
