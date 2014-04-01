@@ -27,5 +27,4 @@ namespace PCLTwo
             return todoItem;
         }
     }
-
 }

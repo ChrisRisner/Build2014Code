@@ -71,37 +71,22 @@ namespace ServiceBusRelayHost.Demo.Screen
         {
             
             Console.WriteLine("Received Contacts Request");
-            //var content = new StreamContent(ScreenCapturer.GetEncodedByteStream());
-            //content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
-
+            
             JArray array = new JArray();
             array.Add("AllUsers");
             array.Add("AndroidUser");
             array.Add("iOSUser");
             array.Add("WinStoreUser");
             array.Add("WindowsPhoneUser");
-            //array.Add(new DateTime(2000, 5, 23));
-
+            
             JObject o = new JObject();
             o["Contacts"] = array;
 
             string json = array.ToString();
 
-            /*
-            var contacts = new
-            {
-                items = new[] {
-                new {name= "AndroidUser"},
-                new {name="iOSUser"},
-                new {name="WindowsUser"},
-                new {name="WindowsPhoneUser"}
-            }
-            };*/
-
             var resp = new HttpResponseMessage()
             {
                 Content = new StringContent(json)
-                //Content = new StringContent("[{\"Name\":\"ABC\"},[{\"A\":\"1\"},{\"B\":\"2\"},{\"C\":\"3\"}]]")
             };
             resp.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             return resp;
