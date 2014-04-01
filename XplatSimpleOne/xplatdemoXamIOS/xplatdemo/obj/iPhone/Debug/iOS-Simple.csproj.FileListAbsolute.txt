@@ -1,0 +1,2 @@
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\obj\iPhone\Debug\iOS-Simple.csprojResolveAssemblyReference.cache
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\obj\iPhone\Debug\xplatdemo.exe

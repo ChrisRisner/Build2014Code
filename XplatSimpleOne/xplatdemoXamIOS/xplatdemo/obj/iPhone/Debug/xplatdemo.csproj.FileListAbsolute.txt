@@ -1,0 +1,17 @@
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\xplatdemo.exe
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\xplatdemo.pdb
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\Microsoft.WindowsAzure.Mobile.dll
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\Microsoft.WindowsAzure.Mobile.Ext.dll
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\Newtonsoft.Json.dll
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\System.Net.Http.Extensions.dll
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\System.Net.Http.Primitives.dll
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\Microsoft.WindowsAzure.Mobile.pdb
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\Microsoft.WindowsAzure.Mobile.xml
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\Microsoft.WindowsAzure.Mobile.Ext.pdb
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\Microsoft.WindowsAzure.Mobile.Ext.xml
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\Newtonsoft.Json.xml
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\System.Net.Http.Extensions.xml
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\bin\iPhone\Debug\System.Net.Http.Primitives.xml
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\obj\iPhone\Debug\xplatdemo.csprojResolveAssemblyReference.cache
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\obj\iPhone\Debug\xplatdemo.exe
+C:\code\build2014\ChatDemoOne\XplatSimple\xplatdemoXamIOS\xplatdemo\obj\iPhone\Debug\xplatdemo.pdb

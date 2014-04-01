@@ -1,0 +1,1 @@
+C:\code\build2014\ChatDemoOne\XplatSimpleTwo\xplatdemoWS\xplatdemo\xplatdemo.csproj;neutral

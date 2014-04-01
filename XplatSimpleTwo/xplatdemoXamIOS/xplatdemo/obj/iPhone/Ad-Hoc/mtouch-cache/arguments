@@ -1,0 +1,38 @@
+# Version: 7.2.0.2 (58c3efa)
+# [first argument, ignore] # /Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/bin/iPhone/Ad-Hoc/mtouch.exe
+/Developer/MonoTouch/usr/bin/mtouch \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache \
+	--nomanifest \
+	--nosign \
+	-dev \
+	/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/bin/iPhone/Ad-Hoc/xplatdemo.app \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/monotouch.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Runtime.Serialization.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Net.Http.dll \
+	-r \
+	/Users/chrisner/code/build2014/xplatdemoXamIOS/Components/azure-mobile-services-1.1.0/lib/ios/Microsoft.WindowsAzure.Mobile.Ext.dll \
+	-r \
+	/Users/chrisner/code/build2014/xplatdemoXamIOS/Components/azure-mobile-services-1.1.0/lib/ios/Microsoft.WindowsAzure.Mobile.dll \
+	-r \
+	/Users/chrisner/code/build2014/xplatdemoXamIOS/Components/azure-mobile-services-1.1.0/lib/ios/Newtonsoft.Json.dll \
+	-r \
+	/Users/chrisner/code/build2014/xplatdemoXamIOS/Components/azure-mobile-services-1.1.0/lib/ios/Xamarin.Auth.iOS.dll \
+	-linksdkonly \
+	-sdk \
+	7.1 \
+	-targetver \
+	7.0 \
+	--abi=armv7 \
+	/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/bin/iPhone/Ad-Hoc/xplatdemo.exe \

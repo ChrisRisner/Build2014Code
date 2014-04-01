@@ -1,0 +1,13 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\xplatdemows\xplatdemo\obj\x86\debug\intermediatexaml\xplatdemo.exe" HashGuid="a1b452ea-4e5c-1f8f-ece9-bee33b6db374" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\xplatdemows\packages\microsoft.bcl.async.1.0.16\lib\win8\microsoft.threading.tasks.dll" HashGuid="6ff4c9bc-43f0-2289-5499-d3da0d316240" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\xplatdemows\packages\microsoft.bcl.async.1.0.16\lib\win8\microsoft.threading.tasks.extensions.dll" HashGuid="79a01987-c06c-c9d7-37eb-629809787680" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\xplatdemows\packages\windowsazure.mobileservices.1.1.4\lib\netcore45\microsoft.windowsazure.mobile.dll" HashGuid="a6c5abef-1d88-78bc-fafc-53b939174976" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\xplatdemows\packages\windowsazure.mobileservices.1.1.4\lib\netcore45\microsoft.windowsazure.mobile.ext.dll" HashGuid="5f1c9559-3f7b-fabf-491b-b0b7501d7e4d" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\xplatdemows\packages\newtonsoft.json.5.0.8\lib\netcore45\newtonsoft.json.dll" HashGuid="fccaaf2a-e039-795e-45a4-59ce84d1518d" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\pclone\bin\debug\pclone.dll" HashGuid="cc2d57bc-c0e2-d82d-1331-8ddd5e5c68d0" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\xplatdemows\packages\microsoft.net.http.2.2.15\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimple\xplatdemows\packages\microsoft.net.http.2.2.15\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

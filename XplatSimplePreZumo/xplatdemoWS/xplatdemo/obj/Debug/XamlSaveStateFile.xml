@@ -1,0 +1,7 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\code\build2014\chatdemoone\xplatsimpleprezumo\xplatdemows\xplatdemo\obj\debug\intermediatexaml\xplatdemo.exe" HashGuid="376184dd-bbf1-7e05-c441-21fb1f07fb9c" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimpleprezumo\xplatdemows\packages\microsoft.bcl.async.1.0.16\lib\win8\microsoft.threading.tasks.dll" HashGuid="6ff4c9bc-43f0-2289-5499-d3da0d316240" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\xplatsimpleprezumo\xplatdemows\packages\microsoft.bcl.async.1.0.16\lib\win8\microsoft.threading.tasks.extensions.dll" HashGuid="79a01987-c06c-c9d7-37eb-629809787680" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

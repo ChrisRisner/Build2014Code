@@ -1,0 +1,12 @@
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/mscorlib.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/Xamarin.Auth.iOS.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/monotouch.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.Runtime.Serialization.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/Microsoft.WindowsAzure.Mobile.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.Net.Http.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.Json.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/Microsoft.WindowsAzure.Mobile.Ext.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/xplatdemo.exe
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.Core.dll
+/Users/chrisner/code/build2014/xplatdemoXamIOS/xplatdemo/obj/iPhone/Ad-Hoc/mtouch-cache/Link/Newtonsoft.Json.dll
