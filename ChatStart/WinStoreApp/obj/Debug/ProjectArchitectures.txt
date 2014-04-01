@@ -1,0 +1,1 @@
+C:\code\build2014\ChatDemoOne\ChatStart\WinStoreApp\WinStoreApp.csproj;neutral
