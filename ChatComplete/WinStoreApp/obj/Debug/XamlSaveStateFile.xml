@@ -1,0 +1,12 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\code\build2014\chatdemoone\chatcomplete\winstoreapp\obj\debug\intermediatexaml\winstoreapp.exe" HashGuid="d4e956ee-f360-ee13-e5a1-c8caff261f64" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatcomplete\packages\windowsazure.messaging.managed.0.1.7.6\lib\netcore45\microsoft.windowsazure.messaging.managed.dll" HashGuid="7c9781b2-8bd9-179a-93b9-f7b7415039a2" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatcomplete\packages\windowsazure.mobileservices.1.1.5\lib\netcore45\microsoft.windowsazure.mobile.dll" HashGuid="6593a809-029a-5f87-f20e-7a5c5fc36cce" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatcomplete\packages\windowsazure.mobileservices.1.1.5\lib\netcore45\microsoft.windowsazure.mobile.ext.dll" HashGuid="5f1c9559-3f7b-fabf-491b-b0b7501d7e4d" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatcomplete\packages\newtonsoft.json.5.0.8\lib\netcore45\newtonsoft.json.dll" HashGuid="fccaaf2a-e039-795e-45a4-59ce84d1518d" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatcomplete\pclproject\bin\debug\pclproject.dll" HashGuid="090e7528-d2b3-8e4c-d1aa-4b228f6c8124" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatcomplete\packages\microsoft.net.http.2.2.18\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
+    <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatcomplete\packages\microsoft.net.http.2.2.18\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

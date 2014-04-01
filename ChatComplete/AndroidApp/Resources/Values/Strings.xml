@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clickme">Click Me!</string>
+    <string name="ApplicationName">ChatDemo</string>
+    <string name="message">Message:</string>
+    <string name="sendto">Send To:</string>
+    <string name="send">Send</string>
+    <string name="login">Login</string>
+    <string name="logout">logout</string>
+    <string name="your_name">Your Name:</string>
+    <string name="user_name">AndroidUser</string>
+    <string name="get_contacts">Get Contacts</string>
+</resources>
