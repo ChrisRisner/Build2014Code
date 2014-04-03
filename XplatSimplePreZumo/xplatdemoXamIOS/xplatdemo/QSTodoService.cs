@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.WindowsAzure.MobileServices;
+using PortableClassLibrary;
 
 namespace xplatdemo
 {
@@ -12,7 +13,7 @@ namespace xplatdemo
 		const string applicationURL = @"https://xplatdemo.azure-mobile.net/";
 		const string applicationKey = @"VcnGmeJydHwPRFuZYQyIHtNgwEREwT73";
 		MobileServiceClient client;
-		IMobileServiceTable<ToDoItem> todoTable;
+        IMobileServiceTable<TodoItem> todoTable;
 		int busyCount = 0;
 
 		public event Action<bool> BusyUpdate;
@@ -25,7 +26,7 @@ namespace xplatdemo
 			client = new MobileServiceClient (applicationURL, applicationKey, this);
 
 			// Create an MSTable instance to allow us to work with the TodoItem table
-			todoTable = client.GetTable <ToDoItem> ();
+            todoTable = client.GetTable<TodoItem>();
 		}
 
 		public static QSTodoService DefaultService {
@@ -34,9 +35,9 @@ namespace xplatdemo
 			}
 		}
 
-		public List<ToDoItem> Items { get; private set;}
+        public List<TodoItem> Items { get; private set; }
 
-		async public Task<List<ToDoItem>> RefreshDataAsync ()
+        async public Task<List<TodoItem>> RefreshDataAsync()
 		{
 			try {
 				// This code refreshes the entries in the list view by querying the TodoItems table.
@@ -52,20 +53,25 @@ namespace xplatdemo
 			return Items;
 		}
 
-		public async Task InsertTodoItemAsync (ToDoItem todoItem)
+        public async Task InsertTodoItemAsync(TodoItem todoItem)
 		{
 			try {
 				// This code inserts a new TodoItem into the database. When the operation completes
 				// and Mobile Services has assigned an Id, the item is added to the CollectionView
-				await todoTable.InsertAsync (todoItem);
-				Items.Add (todoItem); 
+                //////////////////await todoTable.InsertAsync (todoItem);
+                //////////////////Items.Add (todoItem); 
+
+                MobileServiceHelper helper = new MobileServiceHelper();
+                TodoItem item = await helper.InsertTodoItem(todoItem);
+                Items.Add(item);
+
 
 			} catch (MobileServiceInvalidOperationException e) {
 				Console.Error.WriteLine (@"ERROR {0}", e.Message);
 			}
 		}
 
-		public async Task CompleteItemAsync (ToDoItem item)
+        public async Task CompleteItemAsync(TodoItem item)
 		{
 			try {
 				// This code takes a freshly completed TodoItem and updates the database. When the MobileService 

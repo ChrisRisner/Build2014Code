@@ -1,5 +1,6 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json;
+using PortableClassLibrary;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,16 +19,16 @@ using Windows.UI.Xaml.Navigation;
 
 namespace xplatdemo
 {
-    public class TodoItem
-    {
-        public string Id { get; set; }
+    //public class TodoItem
+    //{
+    //    public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "text")]
-        public string Text { get; set; }
+    //    [JsonProperty(PropertyName = "text")]
+    //    public string Text { get; set; }
 
-        [JsonProperty(PropertyName = "complete")]
-        public bool Complete { get; set; }
-    }
+    //    [JsonProperty(PropertyName = "complete")]
+    //    public bool Complete { get; set; }
+    //}
 
     public sealed partial class MainPage : Page
     {
@@ -43,8 +44,12 @@ namespace xplatdemo
         {
             // This code inserts a new TodoItem into the database. When the operation completes
             // and Mobile Services has assigned an Id, the item is added to the CollectionView
-            await todoTable.InsertAsync(todoItem);
-            items.Add(todoItem);
+            //await todoTable.InsertAsync(todoItem);
+            //items.Add(todoItem);
+
+            MobileServiceHelper helper = new MobileServiceHelper();
+            TodoItem item = await helper.InsertTodoItem(todoItem);
+            items.Add(item);
         }
 
         private async void RefreshTodoItems()

@@ -3,15 +3,15 @@ using Newtonsoft.Json;
 
 namespace xplatdemo
 {
-	public class ToDoItem
-	{
-		public string Id { get; set; }
+    //public class ToDoItem
+    //{
+    //    public string Id { get; set; }
 
-		[JsonProperty(PropertyName = "text")]
-		public string Text { get; set; }
+    //    [JsonProperty(PropertyName = "text")]
+    //    public string Text { get; set; }
 
-		[JsonProperty(PropertyName = "complete")]
-		public bool Complete { get; set; }
-	}
+    //    [JsonProperty(PropertyName = "complete")]
+    //    public bool Complete { get; set; }
+    //}
 }
 

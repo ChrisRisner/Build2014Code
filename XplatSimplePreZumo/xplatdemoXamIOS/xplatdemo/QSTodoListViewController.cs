@@ -3,6 +3,7 @@ using System;
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
 using System.Threading.Tasks;
+using PortableClassLibrary;
 
 namespace xplatdemo
 {
@@ -122,7 +123,7 @@ namespace xplatdemo
 			if (string.IsNullOrWhiteSpace (itemText.Text))
 				return;
 
-			var newItem = new ToDoItem {
+			var newItem = new TodoItem {
 				Text = itemText.Text, 
 				Complete = false
 			};
