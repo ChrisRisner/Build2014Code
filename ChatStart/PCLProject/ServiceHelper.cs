@@ -106,7 +106,8 @@ namespace PCLProject
 
         public async Task<List<string>> GetContacts()
         {
-            List<string> result = await MobileService.InvokeApiAsync<ClickClass, List<string>>("GetContacts", null, HttpMethod.Get, null);       
+            List<string> result = new List<string>();
+            result = await MobileService.InvokeApiAsync<ClickClass, List<string>>("GetContacts", null, HttpMethod.Get, null);       
             return result;
         }
 
