@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\code\build2014\chatdemoone\chatstart\winstoreapp\obj\debug\intermediatexaml\winstoreapp.exe" HashGuid="99e55e1a-5cda-43b9-e089-bcf144185deb" />
+    <LocalAssembly PathName="c:\code\build2014\chatdemoone\chatstart\winstoreapp\obj\debug\intermediatexaml\winstoreapp.exe" HashGuid="56e085a7-98cd-1599-bf66-9aa7ea9f95b3" />
     <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatstart\packages\windowsazure.messaging.managed.0.1.7.6\lib\netcore45\microsoft.windowsazure.messaging.managed.dll" HashGuid="7c9781b2-8bd9-179a-93b9-f7b7415039a2" />
     <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatstart\packages\windowsazure.mobileservices.1.1.5\lib\netcore45\microsoft.windowsazure.mobile.dll" HashGuid="6593a809-029a-5f87-f20e-7a5c5fc36cce" />
     <ReferenceAssembly PathName="c:\code\build2014\chatdemoone\chatstart\packages\windowsazure.mobileservices.1.1.5\lib\netcore45\microsoft.windowsazure.mobile.ext.dll" HashGuid="5f1c9559-3f7b-fabf-491b-b0b7501d7e4d" />

@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\code\build2014\ChatDemoOne\ChatStart\WinStoreApp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-04-01T22:13:16.382</Modified>
+      <Modified>2014-04-04T00:53:05.775</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\ChatStart\WinStoreApp\bin\Debug\WinStoreApp.exe">
       <PackagePath>WinStoreApp.exe</PackagePath>
-      <Modified>2014-04-01T22:43:34.805</Modified>
+      <Modified>2014-04-04T00:53:04.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\ChatStart\packages\WindowsAzure.Messaging.Managed.0.1.7.6\lib\netcore45\Microsoft.WindowsAzure.Messaging.Managed.dll">
       <PackagePath>Microsoft.WindowsAzure.Messaging.Managed.dll</PackagePath>
@@ -43,7 +43,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\ChatStart\PCLProject\bin\Debug\PCLProject.dll">
       <PackagePath>PCLProject.dll</PackagePath>
-      <Modified>2014-04-01T22:43:13.992</Modified>
+      <Modified>2014-04-04T00:48:21.842</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\ChatStart\packages\Microsoft.Net.Http.2.2.18\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
@@ -75,15 +75,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\ChatStart\WinStoreApp\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-04-01T22:43:34.258</Modified>
+      <Modified>2014-04-04T00:53:04.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\ChatStart\WinStoreApp\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-04-01T22:43:34.258</Modified>
+      <Modified>2014-04-04T00:53:04.113</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\ChatStart\WinStoreApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-04-01T22:43:35.696</Modified>
+      <Modified>2014-04-04T00:53:05.101</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -15,3 +15,13 @@ ServiceBus/src/ServiceBusRelayHost.Demo.Screen/bin
 ServiceBus/src/ServiceBusRelayHost.Demo.Screen/obj
 ServiceBus/src/ServiceBusRelayHost.Tests/bin
 ServiceBus/src/ServiceBusRelayHost.Tests/obj
+ChatStart/WinStoreApp/obj
+ChatStart/WinStoreApp/bin
+ChatStart/iosApp/obj
+ChatStart/iosApp/bin
+ChatStart/AndroidApp/bin
+ChatStart/AndroidApp/obj
+*/bin/*
+*/obj/*
+*/bin
+*/obj

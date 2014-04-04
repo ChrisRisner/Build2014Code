@@ -31,12 +31,7 @@ namespace WinStoreApp
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            btnTap.Content = "Tapped " + ++mCount + " Times";
-            ServiceHelper.GetInstance().RecordClick(mCount, "WinStore");
-        }
-
+        
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
             MessageObject message = new MessageObject() { Text = txtMessage.Text, Recipient = txtSendTo.Text };
