@@ -1,5 +1,8 @@
 This is the Build Chat Demo
 
+FYI - I'll be providing more guidance (steps to reproduce everything from start to finish) and cleaning the source code up in the coming week.
+
+
 Web API Service Bus relay sample - http://pfelix.wordpress.com/2012/03/15/asp-net-web-api-creating-an-host-using-azure-service-bus/
 Service bus relay source - https://github.com/pmhsfelix/WebApi.Explorations.ServiceBusRelayHost
 Integrate Mobile Services with REST Service Bus Relay Service - http://code.msdn.microsoft.com/windowsazure/How-to-integrate-a-Mobile-1ee6a5ea
