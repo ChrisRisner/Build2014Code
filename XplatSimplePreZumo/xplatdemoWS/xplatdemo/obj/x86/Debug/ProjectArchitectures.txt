@@ -1,0 +1,1 @@
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\xplatdemoWS\xplatdemo\WinStoreApp.csproj;x86

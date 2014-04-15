@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MBP-WIN81</Machine>
+    <WindowsUser>chrisner</WindowsUser>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>4d063fa9-9f8c-4da8-aac0-232935dfa339</PackageIdentityName>
+    <RegisteredManifestChecksum>42D33F87211E1D01B8DA4C285C826B06A3CFF3AE17658431436A5BEED915FA93</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>4d063fa9-9f8c-4da8-aac0-232935dfa339_1.0.0.0_x86__h6nn6gdynbygr</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>4d063fa9-9f8c-4da8-aac0-232935dfa339_h6nn6gdynbygr!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>4d063fa9-9f8c-4da8-aac0-232935dfa339</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=chrisner</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\code\build2014\ChatDemoOne\WinStoreApp\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-26T22:06:37.081</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\WinStoreApp\bin\x86\Debug\WinStoreApp.exe">
+      <PackagePath>WinStoreApp.exe</PackagePath>
+      <Modified>2014-03-26T22:22:34.328</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\packages\WindowsAzure.Messaging.Managed.0.1.7.6\lib\netcore45\Microsoft.WindowsAzure.Messaging.Managed.dll">
+      <PackagePath>Microsoft.WindowsAzure.Messaging.Managed.dll</PackagePath>
+      <Modified>2014-03-26T20:20:20.891</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\packages\WindowsAzure.MobileServices.1.1.5\lib\netcore45\Microsoft.WindowsAzure.Mobile.dll">
+      <PackagePath>Microsoft.WindowsAzure.Mobile.dll</PackagePath>
+      <Modified>2014-03-24T20:12:11.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\packages\WindowsAzure.MobileServices.1.1.5\lib\netcore45\Microsoft.WindowsAzure.Mobile.Ext.dll">
+      <PackagePath>Microsoft.WindowsAzure.Mobile.Ext.dll</PackagePath>
+      <Modified>2014-03-24T20:12:11.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\packages\Newtonsoft.Json.5.0.8\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2014-03-24T20:12:07.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\PCLProject\bin\Debug\PCLProject.dll">
+      <PackagePath>PCLProject.dll</PackagePath>
+      <Modified>2014-03-26T22:22:32.154</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\packages\Microsoft.Net.Http.2.2.18\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2014-03-24T20:12:11.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\packages\Microsoft.Net.Http.2.2.18\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2014-03-24T20:12:11.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\WinStoreApp\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\WinStoreApp\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\WinStoreApp\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\WinStoreApp\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\WinStoreApp\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-03-26T22:06:33.965</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\WinStoreApp\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-03-26T22:06:33.971</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\code\build2014\ChatDemoOne\WinStoreApp\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-03-26T22:22:36.090</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

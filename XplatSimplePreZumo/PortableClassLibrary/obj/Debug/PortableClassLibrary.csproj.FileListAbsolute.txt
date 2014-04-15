@@ -1,0 +1,15 @@
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\PortableClassLibrary.dll.config
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\PortableClassLibrary.dll
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\PortableClassLibrary.pdb
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\Microsoft.WindowsAzure.Mobile.dll
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\System.Net.Http.Extensions.dll
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\System.Net.Http.Primitives.dll
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\System.Net.Http.Extensions.xml
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\bin\Debug\System.Net.Http.Primitives.xml
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\obj\Debug\PortableClassLibrary.csproj.App.config
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\obj\Debug\PortableClassLibrary.csprojResolveAssemblyReference.cache
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\obj\Debug\PortableClassLibrary.dll
+C:\code\build2014\ChatDemoOne\XplatSimplePreZumo\PortableClassLibrary\obj\Debug\PortableClassLibrary.pdb
