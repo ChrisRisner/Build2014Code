@@ -1,1 +1,0 @@
-C:\code\build2014\ChatDemoOne\WinStoreApp\WinStoreApp.csproj;x86
